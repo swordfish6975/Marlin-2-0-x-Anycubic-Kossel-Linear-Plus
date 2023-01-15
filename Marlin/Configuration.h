@@ -60,7 +60,7 @@
 #if ENABLED(KNUTWURST_KOSSEL_PLUS)
    #define KNUTWURST_KOSSEL_ENABLE_BED 2
 #else
-   #define KNUTWURST_KOSSEL_ENABLE_BED 0
+   #define KNUTWURST_KOSSEL_ENABLE_BED 1
 #endif
 
 /**
@@ -174,7 +174,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Knutwurst's Kossel Delta Printer"
+#define CUSTOM_MACHINE_NAME "Anycubic Kossel Delta"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -542,9 +542,9 @@
   //#define DEFAULT_Kd 440
 
   // Anycubic Kossel - run 'M106 S255' & 'M303 E0 C10 S200'
-  #define DEFAULT_Kp 22.36
-  #define DEFAULT_Ki 1.63
-  #define DEFAULT_Kd 76.48
+  #define DEFAULT_Kp 16.84
+  #define DEFAULT_Ki 1.11
+  #define DEFAULT_Kd 64.15
 
   // Anycubic Kossel with silicon sock
   //#define DEFAULT_Kp 16.17
@@ -589,9 +589,9 @@
   // this is for the aluminium bed with a BuildTak-like sticker on it
   // from pid autotune. "M303 E-1 C8 S60" to run autotune on the bed at 60 degreesC for 8 cycles
   #if KNUTWURST_KOSSEL_ENABLE_BED == 1
-    #define DEFAULT_bedKp 374.03
-    #define DEFAULT_bedKi 72.47
-    #define DEFAULT_bedKd 482.59
+    #define DEFAULT_bedKp 133.08
+    #define DEFAULT_bedKi 25.79
+    #define DEFAULT_bedKd 457.89
   #elif KNUTWURST_KOSSEL_ENABLE_BED == 2
     //Anycubic 160W Ultrabase
     #define DEFAULT_bedKp 251.78
@@ -747,7 +747,7 @@
   #endif
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 300.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 355             // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
